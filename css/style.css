@@ -1,0 +1,123 @@
+/* BODY */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: lightgray;
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* --------- BARRA DE BUSQUEDA --------- */
+
+
+.search-box {
+    max-width: 80%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;        
+    height: 65px;
+    padding: 19px;
+    background: var(--input-bg);
+    border-radius: 1rem;
+    padding: 0.75rem;
+    height: fit-content;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: white;
+  }
+  @media screen and (max-width: 800px) {
+
+    .search-box {
+        min-width: 100%;
+    }
+
+  }
+
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #efefef;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+    width: 100%;
+  }
+  .search-bar {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    font-size: 1.3rem; 
+  }
+  .search-container i {
+    font-size: 20px;
+    color: #888;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  input {
+    flex: 1;
+    max-height: 2.5rem;
+    border: 0;
+    outline: 0;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  .search-box svg {
+    stroke: var(--text);
+  }
+  .results {
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+  .results ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.25rem;
+  }
+  .results ul li {
+    list-style: none;
+    border-radius: 0.25rem;
+    padding: 1rem 0.75rem;
+  }
+  .results ul li:hover {
+    background: var(--item-hover);
+    border-radius: 0.25rem;
+  }
+  .input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+  }
+  .input:active {
+    transform: scale(0.95);
+  }
+  .input:focus {
+    border: 2px solid grey;
+  }
+
+.results .movie-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.results .movie-item:hover {
+    background-color: #f0f0f0;
+}
+
+.results.show {
+    display: block;
+}
+
+.row img {
+    position: relative;
+}
+/* --------- HASTA AQUI BARRA DE BUSQUEDA --------- */
