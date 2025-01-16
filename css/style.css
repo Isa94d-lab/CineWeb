@@ -145,7 +145,8 @@ body{
   flex-direction: row;
   height: 100%;
   width: 99vw;
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
   padding-top: 5px;
   cursor: pointer;
 }
@@ -154,19 +155,24 @@ body{
 
 .carousel-item {
   display: flex;
-    height: 425px;
-    width: 500px;
-    margin-top: 30px;
-    background-color: #f0eeee;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 15px;
-    flex-shrink: 0;
-    justify-content: center;
-    transition: all 0.3s ease;
-    margin-left: 15px;
-    margin-right: 15px;
+  height: 350px;
+  width: 500px;
+  margin-top: 30px;
+  background-color: #f0eeee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  flex-shrink: 0;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.carousel-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0, 1)
 }
 
 .info-pelicula1 {
@@ -188,7 +194,7 @@ body{
   font-size: 30px;
   font-weight: 500;
   text-decoration: none;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 a {
@@ -196,7 +202,7 @@ a {
   color: inherit;
 }
 
-.description-movie {
+.genre-movie {
   margin-top: 8px;
   max-width: 90%;
   min-width: none;
@@ -212,9 +218,40 @@ a {
 
 table {
   width: 100%;
-  height: 100px;
 }
 
 td{
   text-align: center;
+}
+
+/* ---- Boton See More / Popup ---- */
+
+#popupOverlay {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  justify-content: center; /* Centra el contenido del popup horizontalmente */
+  align-items: center; /* Centra el contenido del popup verticalmente */
+}
+
+#popupBox {
+  background-color: white; /* Fondo del popup blanco */
+  border-radius: 8px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+}
+
+#popupBox .closeBtn {
+  background-color: crimson; /* Color de botón cerrar */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
