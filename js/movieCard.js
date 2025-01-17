@@ -66,7 +66,7 @@ export function generarTarjetas(peliculas) {
             <button class="closeBtn" class="closePopupBtn">Close</button>
         </div>   
          
-    </div>
+    </div><br>
         </body>
 
         `;

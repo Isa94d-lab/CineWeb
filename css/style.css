@@ -1,18 +1,18 @@
 /* BODY */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-  
-    font-family: "Roboto Condensed", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    text-decoration: none;
-    background-image: url('../img/cine1.jpeg');
-    background-size: cover; /* Hace que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: relative;
-    max-width: 1366px;
-  
+body {
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  background-image: url('../img/cine1.jpeg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  margin: 0; 
+  padding: 0; 
 }
 
 /* --------- BARRA DE BUSQUEDA --------- */
@@ -136,6 +136,19 @@ body{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
+
+@media (max-width: 800px) {
+  .title{
+    font-size: 100px;
+  }
+
+  body {
+    max-height: 100%;
+
+  }
+}
+
+
 /* --------- HASTA AQUI BARRA DE BUSQUEDA --------- */
 
 /* --------- CARRUSEL --------- */
@@ -223,7 +236,46 @@ table {
 td{
   text-align: center;
 }
+
+
 /* --- CARRUSEL RESPONSIVE ---*/
+
+@media (max-width: 768px) {
+
+  #movieCard {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flujo a vertical */
+    align-items: center; /* Opcional: Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espaciado entre las tarjetas */
+  }
+
+  /* Estilo de las tarjetas de película */
+  #movieCard .card {
+    width: 300px; /* Ajusta el ancho de las tarjetas */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+  }
+
+  .carousel-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 380px;
+    height: 325px;
+  }
+
+  .img-movie {
+    height: 250px;
+    width: 380px;
+    border-radius: 10px;
+    height: 225px;
+  
+  }
+}
+
 
 /* ---- Boton See More / Popup ---- */
 
