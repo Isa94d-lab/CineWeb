@@ -276,6 +276,7 @@ td{
   }
 }
 
+/* --- HASTA AQUI CARRUSEL RESPONSIVE ---*/
 
 /* ---- Boton See More / Popup ---- */
 
@@ -329,9 +330,45 @@ td{
   font-weight: 500;
   text-align: center;
   margin: auto;
+  margin-top: 20px;
 }
 
 .pop {
   text-align: left;
   margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* ---- RESPONSIVE Boton See More / Popup ---- */
+
+@media (max-width: 600px) {
+  .popupBox {
+    width: 400px;
+    height: 300px; 
+    padding: 15px; /* Espaciado más pequeño */
+  }
+
+  .popupBox .closeBtn {
+    padding: 8px 16px; /* Botón más pequeño */
+    font-size: 14px; /* Texto más pequeño */
+    margin-top: 4px;
+  }
+
+  .poster {
+    width: 180px;
+    height: 220px;
+  }
+
+  .title-movie-pop {
+    font-size: 24px; /* Título más pequeño */
+    margin-top: 5px;
+  }
+
+  .pop {
+    margin-left: 10px; /* Ajusta el margen */
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
 }

@@ -54,12 +54,12 @@ export function generarTarjetas(peliculas) {
                         <img class="poster" src="${pelicula.poster}">
                     </td>
                     <td class="td2">
-                        <p class="title-movie-pop">${pelicula.nombre}</p><br>
-                        <p class="description-movie-pop pop">Descripcion: ${pelicula.resumen}</p><br>
-                        <p class="genero-movie-pop pop">Genero: ${pelicula.genero}</p><br>
-                        <p class="duracion-movie-pop pop">Duracion: ${pelicula.duracion}</p><br>
-                        <p class="duracion-movie-pop pop">Año de publicacion: ${pelicula.año}</p><br>
-                        <p class="cast-movie-pop pop">Cast: ${pelicula.cast}</p><br> 
+                        <p class="title-movie-pop">${pelicula.nombre}</p>
+                        <p class="description-movie-pop pop">Descripcion: ${pelicula.resumen}</p>
+                        <p class="genero-movie-pop pop">Genero: ${pelicula.genero}</p>
+                        <p class="duracion-movie-pop pop">Duracion: ${pelicula.duracion}</p>
+                        <p class="duracion-movie-pop pop">Año de publicacion: ${pelicula.año}</p>
+                        <p class="cast-movie-pop pop">Cast: ${pelicula.cast}</p>
                     </td>
                 </tr>
             </table>
