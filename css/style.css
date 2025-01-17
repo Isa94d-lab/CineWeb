@@ -223,10 +223,11 @@ table {
 td{
   text-align: center;
 }
+/* --- CARRUSEL RESPONSIVE ---*/
 
 /* ---- Boton See More / Popup ---- */
 
-#popupOverlay {
+.popupOverlay {
   display: none; /* Oculto por defecto */
   position: fixed;
   top: 0;
@@ -236,22 +237,49 @@ td{
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
   justify-content: center; /* Centra el contenido del popup horizontalmente */
   align-items: center; /* Centra el contenido del popup verticalmente */
+  z-index: 10;
 }
 
-#popupBox {
+.popupBox {
   background-color: white; /* Fondo del popup blanco */
   border-radius: 8px;
-  width: 300px;
+  width: 800px;
+  height: 580px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
   text-align: center;
+  z-index: 10;
 }
 
-#popupBox .closeBtn {
+.popupBox .closeBtn {
   background-color: crimson; /* Color de botón cerrar */
   color: white; /* Texto blanco */
   border: none; /* Sin bordes */
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.poster {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.td2 {
+  max-width: 50% !important;
+}
+
+.title-movie-pop {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
+}
+
+.pop {
+  text-align: left;
+  margin-left: 20px;
 }

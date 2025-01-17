@@ -1,4 +1,9 @@
+/* --- Barra de busqueda --- */
+
 import './js/barra_busqueda.js';
+
+/* --- Carrusel --- */
+
 import { peliculas } from './data/info.js';
 import { generarTarjetas } from './js/movieCard.js';
 

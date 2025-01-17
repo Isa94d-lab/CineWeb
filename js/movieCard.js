@@ -13,6 +13,7 @@ export function generarTarjetas(peliculas) {
         tarjeta.classList.add('col'); // Clase para un grid responsive
 
         tarjeta.innerHTML = `
+        <body>
         
             <div class="carousel-item item1"><a>
                <div class="cuadrado">
@@ -21,21 +22,16 @@ export function generarTarjetas(peliculas) {
                                <div class="title-movie">${pelicula.nombre}</div>
                                <table>
                                    <tr>
-                                       <td><div class="genre-movie">${pelicula.genero}</div></td>
+                                       <td><div class="genre-movie">Genero: ${pelicula.genero}</div></td>
 
 
                                        <!--  Prueba del Popup -->
 
                                        <td>
-                                       <button id="openPopupBtn" class="botton-movie">See More</button>
+                                       <button class="openPopupBtn botton-movie">See More</button>
 
 
-                                       <div id="popupOverlay">
-                                            <div id="popupBox">
-                                            <p>This is your popup content!</p>
-                                            <button class="closeBtn" id="closePopupBtn">Close</button>
-                                            </div>
-                                        </div>
+                                       
 
                                         <!--  Prueba del Popup -->
 
@@ -48,13 +44,40 @@ export function generarTarjetas(peliculas) {
                </a>
            </div>    
 
+        <!-- Lo coloco afuera para que se muestre fuera del contenedor -->
+
+        <div class="popupOverlay">
+        <div class="popupBox">
+            <table>
+                <tr>
+                    <td>
+                        <img class="poster" src="${pelicula.poster}">
+                    </td>
+                    <td class="td2">
+                        <p class="title-movie-pop">${pelicula.nombre}</p><br>
+                        <p class="description-movie-pop pop">Descripcion: ${pelicula.resumen}</p><br>
+                        <p class="genero-movie-pop pop">Genero: ${pelicula.genero}</p><br>
+                        <p class="duracion-movie-pop pop">Duracion: ${pelicula.duracion}</p><br>
+                        <p class="duracion-movie-pop pop">Año de publicacion: ${pelicula.año}</p><br>
+                        <p class="cast-movie-pop pop">Cast: ${pelicula.cast}</p><br> 
+                    </td>
+                </tr>
+            </table>
+            <button class="closeBtn" class="closePopupBtn">Close</button>
+        </div>   
+         
+    </div>
+        </body>
+
         `;
 
         // Agregar la tarjeta al contenedor
         contenedor.appendChild(tarjeta);
-    const openPopupBtn = document.getElementById('openPopupBtn');
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    const popupOverlay = document.getElementById('popupOverlay');
+
+    // Seleccionar los elementos dentro de la tarjeta específica
+    const openPopupBtn = tarjeta.querySelector('.openPopupBtn');
+    const closePopupBtn = tarjeta.querySelector('.closeBtn');
+    const popupOverlay = tarjeta.querySelector('.popupOverlay');
 
     openPopupBtn.addEventListener('click', () => {
         popupOverlay.style.display = 'flex'; // Muestra el overlay
@@ -66,9 +89,9 @@ export function generarTarjetas(peliculas) {
 
     popupOverlay.addEventListener('click', (e) => {
         if (e.target === popupOverlay) {
-        popupOverlay.style.display = 'none';
+            popupOverlay.style.display = 'none';
         }
     });
-    });
-}
+}); // Cierre correcto del forEach
 
+} // Cierre correcto de la función generarTarjetas
