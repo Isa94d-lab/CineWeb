@@ -1,33 +1,39 @@
+<!--  Inicializamos el proyecto -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineWeb</title>
+    <!-- Importamos el archivp CSS -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<!-- Establecemos el fondo de la pagina -->
 <body background="/img/cine1.jpeg">
+    <!--  Conteiner que almacenara el titulo y la barra de busqueda -->
     <div class="conteiner1" >
+        <!--  Titulo -->
         <p class="title">CineWeb</p>
+            <!--  Barra de busqueda -->
             <div class="search-box">
+                <!--  Lo que estara adentro de la barra -->
                 <div class="row">
                     <input type="text" class="search-bar" placeholder="Search a movie..." autocomplete="on" />
                     <img src="/img/lupa.png" width="30px" height="30px" margin-left="9px">
                 </div>
+                <!--  Esto mostrara las peliculas disponibles -->
                 <div class="results"></div>
             </div>
     </div>
 
+    <!--  Conteiner que almacenara el carrusel con las peliculas -->
     <div class="conteiner2">
-        <!--  Primer evento del carrusel -->
+        <!-- Esto nos permitira llamar lo creado en nuestro JS (El carrusel) -->
         <div id="movieCard" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
         </div>
     </div>
+    <!-- Importamos el archivp JS -->
     <script type="module" src="app.js" defer></script>
-
-
-
-    
 </body>
 </html> 

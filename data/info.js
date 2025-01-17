@@ -1,4 +1,4 @@
-/* Esta lista nos permitira los nombres de las peliculas en la barra de busqueda */
+/* Esta lista nos permitira almacenar la informacion de cada pelicula */
 export const peliculas = [
     [
         1,
